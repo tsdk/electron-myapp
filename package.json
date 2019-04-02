@@ -1,0 +1,36 @@
+{
+  "name": "electron-myapp",
+  "version": "1.0.0",
+  "author": "tsdk",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "png2icons": "electron-icon-builder -f --input=ms-icon-310x310.png --output=. ",
+    "packager": "electron-packager ./ %npm_package_build_productName% --platform=all --out ./dist --app-version=%npm_package_version% --electron-version=4.1.1 --overwrite --icon=icons/icon.ico --ignore='^/icons$' --ignore='./node_modules/.bin'",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "repository": "https://github.com/tsdk/electron-myapp",
+  "keywords": [
+    "Electron",
+    "tutorial",
+    "demo"
+  ],
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^4.1.1",
+    "electron-builder": "^20.39.0",
+    "electron-icon-builder": "^1.0.0",
+    "electron-packager": "^13.1.1"
+  },
+  "build": {
+    "productName": "MyApp",
+    "copyright": "Copyright © 2019 %npm_package_author%",
+    "appId": "com.electron.myapp",
+    "mac": {
+      "category": "public.app-category.business",
+      "icon": "icons/icon.icns"
+    }
+  }
+}
