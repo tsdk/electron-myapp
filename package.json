@@ -30,7 +30,11 @@
     "appId": "com.electron.myapp",
     "mac": {
       "category": "public.app-category.business",
-      "icon": "icons/icon.icns"
+      "icon": "icons/icon.icns",
+      "target": ["dmg","pkg"]
+    },
+    "win": {
+      "target": ["nsis","zip"]
     }
   }
 }
